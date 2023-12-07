@@ -1,286 +1,168 @@
-:root{--white:hsl(0, 0%, 100%);
---text:hsl(228, 12%, 48%);
---header-text:hsl(212, 21%, 14%)}
-
-body{background-color: midnightblue;}
-
-*{margin:0;}
-
-#header-img{width:60px;
-object-fit:container;
-}
-
-
-*,
-*::after,
-*::before {
-  padding: 0;
+/* Reset some default styles */
+body, h1, p, ul {
   margin: 0;
+  padding: 0;
 }
 
-html {
-  background-color: white;
-  scroll-behavior: smooth;
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-h1 {
-  font-family: 'Titan One', 'Times New Roman', Times, serif;
-  font-size: 48px;
-  font-weight: 700;
+/* Header styles */
+#header {
+  background-color: #333;
   color: white;
+  padding: 10px;
 }
 
-a {
-  color: black;
-}
-
-p {
-  color: whitesmoke;
-}
-
-.title {
-  color: white;
-  text-shadow: 2px 2px black;
-  text-align: center;
-  padding: 48px;
-  padding-top: 96px;
-  border-top: 1px black solid;
-}
-
-
-/*    Navbar    */
-.header {
+.header-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  position: fixed;
-  background-color:rgb(230, 250, 250);
 }
 
-.header-logo {
-  height: 36px;
-  margin-left: 24px;
-  border: 4px solid burlywood;
-  border-radius: 50%;
-  box-shadow: 1px 1px;
-  transition: all 2.0s;
+#header-img {
+  width: 40px; 
+  height: 40px;
+  margin-right: 10px;
 }
 
-.header-logo:hover {
-  border: 4px solid orange;
-  transform: rotate(360deg);
-  transition: all 2.0s;
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
+.the-product {
+  font-size: 1.5rem;
 }
 
 .header-links {
-  display: flex;
-  align-items: center;
-  text-align: center;
   list-style: none;
-  margin-left: auto;
-  margin-right: 12px;
-  
-}
-
-.header-links a {
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-  padding: 16px;
-}
-
-.header-links a:hover {
-  background-color: lightblue;
-  cursor: pointer;
-  color: white;
-  text-shadow: 2px 2px 1px black;
-}
-
-
-
-/*    Title secion    */
-.title-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: solid black 1px;
-  background-image: linear-gradient(
-      60deg,
-      rgba(57, 60, 90, 0.85),
-      rgba(180, 180, 120, 0.5)
-    ),
-    url(https://ibb.co/qpnSyys);
-  background-position: center;
-  background-size: cover;
+}
+
+.header-link {
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+}
+
+/* Title section styles */
+.title-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f2f2f2;
 }
 
 .media-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
-  margin: 128px 72px 72px;
-  gap: 24px;
-  padding: 32px;
-  border: 3px solid skyblue;
-  border-radius: 200px;
-  box-shadow: 2px 2px 20px 2px;
-  background: rgba(57, 60, 90, 0.7);
+  flex-wrap: wrap;
 }
 
 .textbox {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  align-items: flex-start;
-  gap: 20px;
-  padding-left: 32px;
+  max-width: 600px;
 }
 
-.textbox h1 {
-  color: burlywood;
-  text-shadow: 2px 2px black;
+h1 {
+  color: #333;
 }
 
 .main-img {
-  object-fit: cover;
-  flex: 1 1 auto;
-  max-width: 300px;
-  border: 15px solid burlywood;
-  border-radius: 50%;
-  box-shadow: 2px 2px 3px;
+  max-width: 100%;
+  height: auto;
+  border: 10px solid #f2f2f2;
+  border-radius: 10px;
 }
 
 .shop-button {
-  font-weight: 900;
-  padding: 4px 24px;
-  border-radius: 4px;
-  background-color: rgb(230, 250, 250);
-  align-self: center;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .shop-button:hover {
-  cursor: pointer;
-  background-color: lightblue;
-  box-shadow: 1px 1px burlywood;
+  background-color: #555;
 }
 
+/* Team info styles */
+.team-info {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 40px;
+}
 
-/*  Team information section  */
 .worker-container {
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
-
-  padding: 0px 24px 96px 24px;
+  flex-wrap: wrap;
 }
 
 .worker {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  gap: 8px;
-  padding: 24px;  
-  color: white;
-  text-shadow: 2px 2px 1px black;
+  margin: 20px;
+  text-align: center;
 }
 
 .worker-icon {
-  width: 200px;
-  height: 200px;
-  border: 12px solid rgb(230, 250, 250);
-  border-radius: 32px;
-  box-shadow: 2px 2px 3px black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
 .worker-text {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  flex-wrap: wrap;
-  max-width: 200px;
-  font-size: 18px;
   font-weight: bold;
 }
 
-
-/*    Quote section     */
+/* Quote section styles */
 .quote-section {
-  display: flex;
-  flex-direction: column;
-  padding: 128px 128px 96px;
-  background-color: lightblue;
-  border-bottom: solid black 1px;
-  font-size: 24px;
-  line-height: 150%;
-  font-style: italic;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 40px;
 }
 
-.quote-section p {
-  text-align: end;
-  font-style: normal;
-  font-weight: 600;
-  color: sienna;
-}
-
-/*    Email list signup    */
+/* Signup section styles */
 .signup-section {
-  display: flex;
-  justify-content: center;
-  border-bottom: solid black 1px;
-  border-top: solid black 2px;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 40px;
 }
 
 .signup-box {
   display: flex;
   align-items: center;
-  background-color: midnightblue;
-  border: 12px solid lightblue;
-  border-radius: 24px;
-  box-shadow: 2px 2px 3px black;
-  margin: 128px 48px;
-  padding: 32px 48px;
-  max-width: 1100px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .email-text h2 {
-  color: lightblue;
-  text-shadow: 1px 1px black;
-  font-family: 'Titan One', Arial, Helvetica, sans-serif;
-  padding-bottom: 8px;
-}
-
-.email-text p {
-  padding-right: 24px;
+  color: #f2f2f2;
 }
 
 .email-button {
-  flex-shrink: 0;
-  height: 36px;
-  width: 128px;
-  padding: 4px 24px;
-  margin: 24px auto;
-  background-color: babypink;
-  border-radius: 4px;
-  border: 3px solid lightblue;
-  box-shadow: 2px 2px 3px black;
-  font-weight: 400;
-}
-
-.email-button:hover {
-  font-weight: 800;
-  background-color: skyblue;
-  border-color: steelblue;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-/*    Footer    */
-footer p {
-  padding: 24px;
+.email-button:hover {
+  background-color: #ddd;
+}
+
+/* Footer styles */
+footer {
   text-align: center;
-  color: black;
-  background-color: midnightblue;
+  background-color: #333;
+  color: white;
+  padding: 20px;
 }
